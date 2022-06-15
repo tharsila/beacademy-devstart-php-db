@@ -2,19 +2,13 @@
 
 include '../vendor/autoload.php';
 
-$database = 'db_store';
-$username = 'root';
-$password = 'kemei34';
+USE App\Connection\Connection;
 
-/* mysql:host=localhost;dbname = db_store  */
-$connection = new PDO('mysql:host=localhost;dbname='.$database, $username, $password);
-var_dump($connection);
+$connection = Connection::getConnection();
 
 $query = 'SELECT * FROM tb_category';
 $prepare = $connection->prepare($query);
 $prepare->execute();
-
-var_dump($prepare->fetch());
 
 while($registers = $prepare->fetch()) {
   var_dump($registers);
