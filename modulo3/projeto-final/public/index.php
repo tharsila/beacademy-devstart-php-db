@@ -1,8 +1,11 @@
 <?php
 
 include '../vendor/autoload.php';
+include '../config/routes.php';
 
-USE App\Connection\Connection;
+use App\Controller\ErrorController;
+
+/* USE App\Connection\Connection;
 
 $connection = Connection::getConnection();
 
@@ -12,29 +15,9 @@ $prepare->execute();
 
 while($registers = $prepare->fetch()) {
   var_dump($registers);
-}
-
-/* use App\Controller\indexController;
-use App\Controller\ProductController;
-use App\Controller\CategoryController;
-use App\Controller\ErrorController;
+} */
 
 $url = explode('?', $_SERVER['REQUEST_URI'])[0] ;
-
-function createRoute(string $controllerName, string $methodName){
-  return [
-    'controller' => $controllerName,
-    'method' => $methodName,
-  ];
-}
-
-$routes = [
-  '/' => createRoute(IndexController::class, 'indexAction' ),
-  '/produtos' => createRoute(ProductController::class, 'listAction'),
-  '/produtos/novo' => createRoute(ProductController::class, 'addAction'),
-  '/categoria' => createRoute(CategoryController::class, 'addCategory')
-];
-
 
 if (false === isset($routes[$url])) {
   (new ErrorController()) -> notFoundAction();
@@ -44,4 +27,4 @@ if (false === isset($routes[$url])) {
 $controllerName = $routes[$url]['controller'];
 $methodName = $routes[$url]['method'];
 
-(new $controllerName()) -> $methodName(); */
+(new $controllerName()) -> $methodName();
