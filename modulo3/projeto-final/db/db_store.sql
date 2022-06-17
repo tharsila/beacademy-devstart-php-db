@@ -14,8 +14,8 @@ CREATE TABLE tb_product (
   name VARCHAR(30) NOT NULL,
   description VARCHAR(100) NOT NULL,
   photo VARCHAR(255) NOT NULL,
-  valor FLOAT(5,2) NOT NULL,
-  categoria_id INT(11) NOT NULL,
+  value FLOAT(6,2) NOT NULL,
+  category_id INT(11) NOT NULL,
   quantity INT(5) NOT NULL,
   created_at DATETIME NOT NULL
 );
@@ -27,10 +27,10 @@ VALUES
   ('Ferramentas', 'Furadeira, Martelo, Chave de Fenda e etc'),
   ('Automovivo', 'Cera de Carnaúba, Pneu Pretinho, Aspirador Portátil e etc');
 
-INSERT INTO tb_product(name, description, valor, quantity)
+INSERT INTO tb_product(name, description, photo, value, category_id, quantity, created_at)
 VALUES
-  ('TV', 'TV de 32 polegadas', '1500', '10'),
-  ('Martelo', 'Martelo uso domestico', '30', '5'),
-  ('Mouse', 'Mouse 1000 dpi', '15', '30'),
-  ('Cera de Carnaúba', 'Cera Automotiva Liquida', '40', '8'),
-  ('Notebook', 'Notebook Vaio i5 10gen', '2200', '10');
+  ('Martelo', 'Martelo uso domestico','https://cdn.leroymerlin.com.br/products/martelo_de_unha_27mm_tramontina_90709234_0001_300x300.jpg', 30, 2, 5, '2022-06-17 10:21:15'),
+  ('TV', 'TV de 32 polegadas', 'https://imgs.extra.com.br/55002768/1g.jpg?imwidth=292', 1500.00, 1, 10, '2022-06-17 10:06:25' ),
+  ('Mouse', 'Mouse 1000 dpi', 'https://imgs.extra.com.br/55026730/1xg.jpg?imwidth=292', 30, 1, 10, '2022-06-17 10:21:25' ),
+  ('Notebook', 'Notebook Vaio i5 10gen', 'https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRnYpCWhf0Z7EbnSmtbKXA-Bm-6l0zeAoGZJWVpTaEwxci8lD1hQKtNmGI2pjV5e4HjC4aB-PIzKtyigOuv-fIv_PWDKIWUcQevaQMhcYdFSYdU-EMGKLYnpA&usqp=CAE', 2200, 1, 10, '2022-06-17 10:24:25' );
+  ('Cera de Carnaúba', 'Cera Automotiva Liquida', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4M0xuXWF69zSn3_ZOBvxqzFoRhF2TuJdSqA&usqp=CAU', 40, 3, 8, '2022-6-17 10:23:05');
