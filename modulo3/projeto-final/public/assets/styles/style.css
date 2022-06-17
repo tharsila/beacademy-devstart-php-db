@@ -53,4 +53,14 @@ label {
 nav a {
   color: #333;
   font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.img {
+  display: flex;
+  justify-content: center;
+}
+
+.img img {
+  width: 40%;
 }
