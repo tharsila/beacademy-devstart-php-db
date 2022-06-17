@@ -2,12 +2,11 @@
   <h1 class="text-center">Cadastrar Produto</h1>
   <form method="post">
     <label for="category">Categoria</label>
-    <select name="category" id="category" class="form-select mb-3">
+    <select name="category" id="category" class="form-select mb-3" required>
       <option selected>-- Selecione --</option>
       <?php
         while($category = $data->fetch(\PDO::FETCH_ASSOC)) {
           extract($category);
-          
           echo "<option value='{$id}'>{$name}<option>";
         }
       ?>
