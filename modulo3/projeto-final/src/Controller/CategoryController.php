@@ -21,7 +21,6 @@ class CategoryController extends AbstractController
 
  public function addAction(): void
  {
-
   if($_POST) {
     $name = $_POST['name'];
     $description = $_POST['description'];
@@ -41,10 +40,36 @@ class CategoryController extends AbstractController
  {
   $id = $_GET['id'];
   $con = Connection::getConnection();
-  $query = "DELETE FROM tb_category WHERE id={$id}";
+  $query = "DELETE FROM tb_category WHERE id='{$id}'";
   $result = $con->prepare($query);
   $result->execute();
 
   echo 'Categoria excluida';
+ }
+
+ public function editAction(): void 
+ {
+  $id = $_GET['id'];
+  $con = Connection::getConnection();
+
+  if ($_POST) {
+    $newName = $_POST['name'];
+    $newDescription = $_POST['description'];
+
+    $queryUpdate = "UPDATE tb_category SET name='{$newName}', description='{$newDescription}' WHERE id='{$id}'";
+    $result = $con->prepare($queryUpdate);
+    $result->execute();
+
+    echo 'Categoria atualizada';
+  }
+
+  $query = "SELECT * FROM tb_category WHERE id='{$id}'";
+  $result = $con->prepare($query);
+  $result->execute();
+
+  $data = $result->fetch(\PDO::FETCH_ASSOC);
+
+  
+  parent::render('category/edit', $data);
  }
 }
