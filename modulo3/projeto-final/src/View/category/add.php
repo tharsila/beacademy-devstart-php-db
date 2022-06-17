@@ -5,6 +5,6 @@
     <input type="text" name="name" id="name"  class="form-control mb-3">
     <label for="description">Descrição</label> 
     <textarea name="description" id="description" rows="5" class="form-control mb-3"></textarea>
-    <button class="btn btn-primary">Enviar</button>
+    <button class="btn btn-dark">Enviar</button>
   </form>
 </div>

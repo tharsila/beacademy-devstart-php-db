@@ -1,5 +1,8 @@
 <div class="container">
   <h1 class="text-center">Lista de categorias</h1>
+  <div class= "text-end mb-3">
+    <a class="btn btn-success btn-lg" href="/categorias/novo">Nova Categoria</a>
+  </div>
   <table class="table table-hover">
     <thead class="table-dark" >
       <tr>
