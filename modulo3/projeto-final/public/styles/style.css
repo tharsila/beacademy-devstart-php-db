@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1b50ea;
+}
+
+h1 {
+  color: white;
+  font-weight: 800;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header-bg {
+  background: #ffff;
+  padding: 15px 0;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+}
+
+.header-bg .header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo  {
+  font-size: 1.8rem;
+  font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+.header-bg .header nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+nav a {
+  color: #333;
+  font-weight: bold;
+}
