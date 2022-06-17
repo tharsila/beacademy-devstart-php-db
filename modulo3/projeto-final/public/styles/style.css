@@ -22,6 +22,11 @@ a {
   text-decoration: none;
 }
 
+label {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
 .header-bg {
   background: #ffff;
   padding: 15px 0;
