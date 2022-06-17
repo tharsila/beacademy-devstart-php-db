@@ -6,6 +6,9 @@ namespace App\Controller;
 
 use App\Connection\Connection;
 
+use Dompdf\Dompdf;
+
+
 class ProductController extends AbstractController
 {
   public function listAction(): void
@@ -100,5 +103,52 @@ class ProductController extends AbstractController
     $result->execute();
 
     parent::renderMessage('Sucesso: Produto excluido');
+  }
+
+  public function reportAction(): void
+  {
+    $con = Connection::getConnection();
+
+    $query = "SELECT prod.id, prod.name, prod.quantity, cat.name as category
+    FROM tb_product prod 
+    INNER JOIN tb_category cat ON prod.category_id = cat.id";
+
+    $result = $con->prepare($query);
+    $result->execute();
+
+    $content = '';
+
+    while($product = $result->fetch(\PDO::FETCH_ASSOC)) {
+      extract($product);
+      $content.= "
+        <tr>
+        <td>{$id}</td>
+        <td>{$name}</td>
+        <td>{$quantity}</td>
+        <td>{$category}</td>
+        </tr>
+      ";
+    }
+
+    $html = "
+      <h1>Relatório de Produtos no Estoque</h1>
+      <table border='1' width='100%'>
+        <thead>
+          <tr>
+          <th>#ID</th>
+          <th>Nome</th>
+          <th>Quantidade</th>
+          <th>Categoria</th>
+          </tr>
+        </thead>
+          {$content}
+        </tbody>
+      </table>
+    ";
+
+    $dompdf = new Dompdf();
+    $dompdf->loadHtml($html);
+    $dompdf->render();
+    $dompdf->stream();
   }
 }

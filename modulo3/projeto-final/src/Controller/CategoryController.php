@@ -60,7 +60,7 @@ class CategoryController extends AbstractController
     $result = $con->prepare($queryUpdate);
     $result->execute();
 
-    echo 'Categoria atualizada';
+    parent::renderMessageAdd('Sucesso: Categoria Atualizada');
   }
 
   $query = "SELECT * FROM tb_category WHERE id='{$id}'";

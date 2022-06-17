@@ -2,6 +2,7 @@
   <h1 class="text-center">Lista de Produtos</h1>
   <div class= "text-end mb-3">
     <a class="btn btn-success btn-lg" href="/produtos/novo">Novo Produto</a>
+    <a class="btn btn-secondary btn-lg" href="/produtos/relatorio">Gerar PDF</a>
   </div>
   <table class="table table-hover">
     <thead class="table-dark" >
@@ -11,7 +12,6 @@
         <th>Descrição</th>
         <th>Imagem</th>
         <th>Valor</th>
-        <th>Categoria</th>
         <th>Qtd</th>
         <th>Data de Cadastro</th>
         <th>Ações</th>
@@ -29,7 +29,6 @@
             <td>{$description}</td>
             <td><img width='100px' src={$photo}></td>
             <td>R$ {$value}</td>
-            <td>{$category_id}</td>
             <td>{$quantity}</td>
             <td>{$created_at}</td>
             <td>
