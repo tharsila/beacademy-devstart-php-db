@@ -31,11 +31,11 @@ class CategoryController extends AbstractController
 
     $result = $con->prepare($query);
     $result->execute();
+    parent::renderMessageAdd('Sucesso: Categoria Adicionada');
   }
-
   parent::render('category/add');
  }
-
+ 
  public function removeAction(): void
  {
   $id = $_GET['id'];
@@ -44,7 +44,7 @@ class CategoryController extends AbstractController
   $result = $con->prepare($query);
   $result->execute();
 
-  echo 'Categoria excluida';
+  parent::renderMessage('Sucesso: Categoria Excluida');
  }
 
  public function editAction(): void 
