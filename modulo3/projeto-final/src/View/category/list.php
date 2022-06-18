@@ -3,31 +3,34 @@
   <div class= "text-end mb-3">
     <a class="btn btn-success btn-lg" href="/categorias/novo">Nova Categoria</a>
   </div>
-  <table class="table table-hover">
-    <thead class="table-dark" >
-      <tr>
-        <th>#ID</th>
-        <th>Nome</th>
-        <th>Descrição</th>
-        <th>Ações</th>
-      </tr>
-    </thead>
-      <tbody>
-        <?php
-        while($category = $data->fetch(\PDO::FETCH_ASSOC)) {
-          extract($category);  /* extrai os indices do array */
-          echo 
-          "<tr class='bg-white'>
-            <td>{$id}</td>
-            <td>{$name}</td>
-            <td>{$description}</td>
-            <td>
-              <a href='/categorias/editar?id={$id}' class='btn btn-warning btn-sm'>Editar</a>
-              <a href='/categorias/excluir?id={$id}' class='btn btn-danger btn-sm'>Excluir</a>
-            </td>
-          </tr>";
-        }
-      ?>
-    </tbody>
-  </table>
+  <div class="table-responsive">
+    <table class="table table-hover">
+      <thead class="table-dark" >
+        <tr>
+          <th>#ID</th>
+          <th>Nome</th>
+          <th>Descrição</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+        <tbody>
+          <?php
+          while($category = $data->fetch(\PDO::FETCH_ASSOC)) {
+            extract($category);  /* extrai os indices do array */
+            echo 
+            "<tr class='bg-white'>
+              <td>{$id}</td>
+              <td>{$name}</td>
+              <td>{$description}</td>
+              <td>
+                <a href='/categorias/editar?id={$id}' class='btn btn-warning btn-sm'>Editar</a>
+                <a href='/categorias/excluir?id={$id}' class='btn btn-danger btn-sm'>Excluir</a>
+              </td>
+            </tr>";
+          }
+        ?>
+      </tbody>
+    </table>
+
+  </div>
 </div>
