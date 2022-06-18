@@ -70,7 +70,7 @@ Inicie o servidor
 <h3>Utilitários</h3>
 <ul>
  <li><p>Imagens: <a href="https://undraw.co/">unDraw</a>
- <li><p>Fontes: <a href="https://fonts.google.com/specimen/poppins">Poppins</a> e <a href="https://fonts.google.com/specimen/Righteous">Righteous</a></p></li>
+ <li><p>Fontes: <a href="https://getbootstrap.com/docs/4.0/content/typography/">Bootstrap Typography</a> e <a href="https://fonts.google.com/specimen/Kdam+Thmor+Pro">Kdam Thmor Pro</a></p></li>
 </ul>
 
 <hr>
