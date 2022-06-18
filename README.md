@@ -12,20 +12,20 @@
 <hr>
  
 <h2 id="sobre-o-projeto"> :page_with_curl:Sobre o projeto</h2>
-<p>Desenvolvimento de um projeto CRUD (e-commerce) utilizando o acesso a banco de dados com o MariaDB e linguagem PHP. Projeto feito com o intuito de colocar em prática assuntos abordados durante os módulo de POO e banco de dados do programa Devstart Paylivre :rocket:<p>
+<p>Desenvolvimento de um projeto CRUD (e-commerce) utilizando o acesso ao banco de dados com o MariaDB e linguagem PHP. Projeto feito com o intuito de colocar em prática assuntos abordados durante os módulo de POO e banco de dados do programa Devstart Paylivre :rocket:<p>
 <hr>
  
  <h2 id="layout">:art:Layout</h2>
  <h3>Mobile</h3>
  
 <div align="center">
-  <img align="center" src ="" width="70%"/>
+  <img align="center" src ="https://user-images.githubusercontent.com/89864249/174417054-659669f8-c816-4c33-a727-2078d4ac840c.gif" width="800px"/>
 </div>
  
  <h3>Web</h3>
  
 <div align="center">
-  <img align="center" src ="" width="800px"/>
+  <img align="center" src ="https://user-images.githubusercontent.com/89864249/174417063-a23d0023-7954-45a7-a676-cc7355bd85b6.gif" width="800px"/>
 </div>
 
 
@@ -36,13 +36,13 @@
 Clone o projeto
 
 ```bash
-  git clone https://github.com/tharsila/beacademy-devstart-crud-contatos-php.git
+  git clone https://github.com/tharsila/beacademy-devstart-php-db.git
 ```
 
 Entre no diretório do projeto
 
 ```bash
-  cd beacademy-devstart-crud-contatos-php
+  cd beacademy-devstart-crud-contatos-php/modulo03/projeto-final
 ```
 
 Instale as dependências e o autoload
@@ -54,7 +54,7 @@ Instale as dependências e o autoload
 Inicie o servidor
 
 ```bash
-  php -S localhost:8000
+  php -S localhost:8000 -t public
 ```
 
 <h2 id="tecnologias">:hammer_and_wrench:Tecnologias</h2>
