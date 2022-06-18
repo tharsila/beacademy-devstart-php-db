@@ -12,7 +12,7 @@
 <hr>
  
 <h2 id="sobre-o-projeto"> :page_with_curl:Sobre o projeto</h2>
-<p>Desenvolvimento de um projeto CRUD (e-commerce) utilizando o acesso ao banco de dados com o MariaDB e linguagem PHP. Projeto feito com o intuito de colocar em prática assuntos abordados durante os módulo de POO e banco de dados do programa Devstart Paylivre :rocket:<p>
+<p>Desenvolvimento de um projeto CRUD (e-commerce) utilizando o acesso ao banco de dados com o MariaDB e linguagem PHP com arquitetura MVC. Projeto feito com o intuito de colocar em prática assuntos abordados durante os módulo de POO e banco de dados do programa Devstart Paylivre :rocket:<p>
 <hr>
  
  <h2 id="layout">:art:Layout</h2>
