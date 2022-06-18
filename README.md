@@ -63,8 +63,9 @@ Inicie o servidor
 <h3>Website</h3>
 <ul>
  <li><a href="https://www.php.net/">PHP</a></li>
+ <li><a href="https://mariadb.org/">MariaDB</a></li>
  <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS">CSS</a></li>
-   <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
+ <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
 </ul>
  
 <h3>Utilitários</h3>
