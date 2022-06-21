@@ -42,7 +42,7 @@ Clone o projeto
 Entre no diretório do projeto
 
 ```bash
-  cd beacademy-devstart-crud-contatos-php/modulo3/projeto-final
+  cd beacademy-devstart-php-db/modulo3/projeto-final
 ```
 
 Instale as dependências e o autoload
